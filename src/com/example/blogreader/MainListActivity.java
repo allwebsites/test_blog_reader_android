@@ -1,20 +1,15 @@
 package com.example.blogreader;
 
 import android.app.ListActivity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
 
 public class MainListActivity extends ListActivity {
 	
-	protected String[] mAndroidNames = {
-		"Test1",
-		"Test2",
-		"Test3",
-		"Test4",
-		"Test5"
-	};
+	protected String[] mAndroidNames;
 	
 
 	@Override
@@ -22,10 +17,13 @@ public class MainListActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_list);
 		
-		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mAndroidNames);
-		//setListAdapter(adapter);
+		Resources resources = getResources();
+		mAndroidNames = resources.getStringArray(R.array.android_names);
+		
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mAndroidNames);
+		setListAdapter(adapter);
 
-		Toast.makeText(this, getString(R.string.no_items), Toast.LENGTH_LONG).show();
+		//Toast.makeText(this, getString(R.string.no_items), Toast.LENGTH_LONG).show();
 	}
 
 	@Override
