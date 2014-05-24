@@ -7,6 +7,8 @@
     <string name="no_internet_available">No internet available</string>
     <string name="error_title">Oops! sorry</string>
     <string name="error_message">There was error to get blog information...</string>
+    <string name="action_share">Share</string>
+    <string name="have_to_share_teim">Have do u want share this post?</string>
 
     <string-array name="android_names">
         <item>item1</item>
