@@ -5,6 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 	<string name="no_internet_available">No internet available</string>
+	<string name="error_title">Oops! sorry</string>
+	<string name="error_message">There was error to get blog information...</string>
 	
 	<string-array name="android_names">
 	    <item>item1</item>
